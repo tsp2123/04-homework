@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <style>
+      svg { 
+        display: block;
+        margin: 0 auto;
+      }
+
+      h1 { margin-bottom: 2rem; }
+
+      body {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      h3 { 
+        margin-top: 3rem; 
+        margin-bottom: 1rem;
+      }
+
+      .container {
+        max-width: 46rem;
+      }
+
+      img.block {
+        display: block;
+        border: solid #333 1p;
+        margin: 0 auto;
+      }
+
+      .axis line, .axis path {
+        stroke-width: 0.5;
+        stroke: #999;
+      }
+
+      svg {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Homework: Events in D3</h1>
+
+      <p class="alert alert-warning">You'll need to run <code>npm start</code> or <code>npm run start</code> to start up Parcel.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h3>1: A bar chart about countries</h3>
+      <p>Build a bar chart of different countries' life expectancies. I want the buttons to highlight what they say they should highlight.</p>
+      <p>You can pick what a low GDP is.</p>
+      <p>
+        <a id="asia" class="btn btn-warning">Asia</a>
+        <a id="africa" class="btn btn-warning">Africa</a>
+        <a id="north-america" class="btn btn-warning">North America</a>
+        <a id="low-gdp" class="btn btn-warning">Low GDP countries</a>
+        <a id="color-by-continent" class="btn btn-warning">Color by continent</a>
+        <a id="reset" class="btn btn-warning">Reset</a>
+      <div id="bar-chart"></div>
+    </div>
+  </div>
+     
+  <div class="row">
+    <div class="col-12">
+      <h3>2: A line chart about stock prices</h3>
+      <p>This is a graph of AAPL stock price over time. Right now it's a very pleasant line chart, but I'd love to actually see the data points themselves!</p>
+      <p>Edit <code>line-chart.js</code> to add circles for each data point. They should line up with the line, and be the same color.</p>
+      <p>When someone hovers over a point, it should <strong>grow slightly larger</strong>, and all of the information should be displayed on the right-hand column (see <code>AAPL.csv</code> for the fields).</p>
+      <p>When someone removes their mouse from a dot, the circle should return to its original size, but the information may still be shown. When the page loads there should <strong>not</strong> be anything in that column.</p>
+    </div>
+    <div class="col-9">
+      <div id="line-chart">
+      </div>
+    </div>
+    <div id="info" class="col-3 mt-4">
+
+      <p>Date: <strong id="date"></strong><br>
+         Open: <strong id="open"></strong><br>
+         High: <strong id="high"></strong><br>
+         Low: <strong id="low"></strong><br>
+         Close: <strong id="close"></strong><br>
+         Volume: <strong id="volume"></strong><br>
+         Adj Close: <strong id="adjclose"></strong><br>
+      </p>
+
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-12">
+      <h3>3. A slope graph about <a href="https://www.nytimes.com/interactive/2017/09/02/upshot/fentanyl-drug-overdose-deaths.html">drug overdose deaths</a></h3>
+    </div>
+    <div class="col-7">
+      <div id="slope-graph">
+      </div>
+    </div>
+    <div class="col-5">
+      <p>When you hover over a state's name, the state's name, the line, and the dots should all light up in a nice highlight color.</p>
+      <p>If you hover over a line or a dot, the name/line/dot should also highlight.</p>
+      <p>When you remove your mouse, they should return to their original color.</p>
+      <div class="alert alert-warning small">
+        You'll want to use <code>console.log(d)</code> a lot in this to see what the data looks like - it isn't always the same as in the csv!
+      </div>
+    </div>
+  </div>
+
+  <!-- Now we include our actual visualization -->
+  <script src="bar-chart.js"></script>
+  <script src="line-chart.js"></script>
+  <script src="slope-graph.js"></script>
+</div>
+</body>
+</html>
